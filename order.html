@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<h3> 주 문 하 기 </h3>
+	<form action="">
+		<p> 주문서 </p>
+		<table border="1">
+			<tr> <th> 음식 제목 </td> <th> 가격 </th> <th> 수량 </th> <th> 합계 </th> </tr>
+			<tr>
+				<td> 이모네 감자탕 특대 </td> <td> 30,000원 </td>
+				<td> <input id="food1" type="text" size="2" value="0"
+                            onclick="this.select();" /> </td>
+				<td> <input id="food1Total" type="text" size="6" value="0"/> 원</td>
+			</tr>
+			<tr>
+				<td> 나영 왕돈까스 </td> <td> 6,000원 </td>
+				<td> <input id="food2" type="text" size="2" value="0"
+                            onclick="this.select();" /> </td>
+				<td> <input id="food2Total" type="text" size="6" value="0"/> 원</td>
+			</tr>
+			<tr>
+				<td> 로충칭 마라탕 </td> <td> 8,000원 </td>
+				<td> <input id="food3" type="text" size= "2" value="0"
+                            onclick="this.select();" /> </td>
+				<td> <input id="food3Total" type="text" size="6" value="0"/> 원</td>
+			</tr>
+			<tr>
+				<td> 합계 </td> <td> &nbsp; </td>
+				<td> <input id="totalNumber" type="text" size= "2" value="0"/> </td>
+				<td> <input id="totalPrice" type="text" size="6" value="0"/> 원</td>
+			</tr>
+		</table> <br />
+		<input type="button" value="합계계산" onclick="updateAll();" />
+		<input type="reset" value="초기화"/>
+	</form>
+	<script type="text/javascript">
+		function updateAll() {
+			var n1 = document.getElementById("food1").value;
+			var n2 = document.getElementById("food2").value;
+			var n3 = document.getElementById("food3").value;
+		
+			var p1 = 30000 * n1;
+			var p2 = 6000 * n2;
+			var p3 = 8000 * n3;
+			document.getElementById("food1Total").value = p1;
+			document.getElementById("food2Total").value = p2;
+			document.getElementById("food3Total").value = p3;
+	
+			var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3);
+			document.getElementById("totalNumber").value = totalNumber;
+			var totalPrice = p1 + p2 + p3;
+			document.getElementById("totalPrice").value = totalPrice;
+		}
+	</script>
+</body>
+</html>

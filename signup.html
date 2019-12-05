@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>회원가입</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원가입</legend>
+			<label>아 이 디 :</label> 
+				<input type="text" name="ID" size="15">
+				<input type="button" id="bu" value="중복체크"><br>
+			<label>비 밀 번 호 :</label>
+				<input type="passward" id="pass1"><br>
+			<label>비밀번호 확인 :</label>
+				<input type="passward" id="pass2"><br>
+			<label>이 름 :</label>
+				<input type="text"><br>
+			<label>전 화 번 호 :</label>
+				<input type="tel"><br>
+			<label>이 메 일 :</label>
+				<input type="email"><br>
+			<label>생 년 월 일 :</label>
+				<input type="month" name="birth"><br>
+			<label>핸 드 폰 :</label>
+				<select>
+					<option value="010" selected>010</option>
+					<option value="011">011</option>
+					<option value="019">019</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+					<option value="018">018</option>
+				</select>
+				-<input type="text" id="add">-<input type="text" id="add"><br>
+			<label>메 일 수 신 :</label>
+				<input type="radio" id="gen" name="mail" value="agree">수신동의
+				<input type="radio" id="gen" name="mail" value="degree">수신거부<br>
+			<label>자 기 소 개 :</label>
+				<textarea rows="3" cols="30">텍스트를 작성하는 공간입니다.</textarea>
+		</fieldset>
+		<input type="submit" value="등록">
+		<input type="reset" value="초기화">
+	</form>
+</body>
+</html>
+				
+			
