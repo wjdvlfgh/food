@@ -2,30 +2,43 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
+	<title> 주 문 하 기 </title>
+	<style>
+		body {
+			background-color: lightyellow;
+			font-size: 16pt;
+		}
+	</style>
 </head>
 <body>
-	<h3> 주 문 하 기 </h3>
+	<h2> 음식 주문 양식 </h2>
 	<form action="">
 		<p> 주문서 </p>
 		<table border="1">
 			<tr> <th> 음식 제목 </td> <th> 가격 </th> <th> 수량 </th> <th> 합계 </th> </tr>
 			<tr>
-				<td> 이모네 감자탕 특대 </td> <td> 30,000원 </td>
-				<td> <input id="food1" type="text" size="2" value="0"
-                            onclick="this.select();" /> </td>
+				<td> 감자탕(特大) </td> <td> 30,000원 </td>
+				<td> <input id="food1" type="text" size= "2" value="0"
+								onclick="this.select();" /> </td>
 				<td> <input id="food1Total" type="text" size="6" value="0"/> 원</td>
 			</tr>
 			<tr>
-				<td> 나영 왕돈까스 </td> <td> 6,000원 </td>
-				<td> <input id="food2" type="text" size="2" value="0"
-                            onclick="this.select();" /> </td>
+				<td> 왕돈까스 </td> <td> 6,000원 </td>
+				<td> <input id="food2" type="text" size= "2" value="0"
+								onclick="this.select();" /> </td>
 				<td> <input id="food2Total" type="text" size="6" value="0"/> 원</td>
 			</tr>
 			<tr>
-				<td> 로충칭 마라탕 </td> <td> 8,000원 </td>
+				<td> 마라탕(포장) </td> <td> 8,000원 </td>
 				<td> <input id="food3" type="text" size= "2" value="0"
-                            onclick="this.select();" /> </td>
+								onclick="this.select();" /> </td>
 				<td> <input id="food3Total" type="text" size="6" value="0"/> 원</td>
+			</tr>
+			<tr>
+				<td> 차슈 덮밥(大) </td> <td> 6,000원 </td>
+				<td> <input id="food4" type="text" size= "2" value="0"
+								onclick="this.select();"/> </td>
+				<td> <input id="food4Total" type="text" size="6" value="0"/> 원</td>
 			</tr>
 			<tr>
 				<td> 합계 </td> <td> &nbsp; </td>
@@ -41,17 +54,20 @@
 			var n1 = document.getElementById("food1").value;
 			var n2 = document.getElementById("food2").value;
 			var n3 = document.getElementById("food3").value;
+			var n4 = document.getElementById("food4").value;
 		
 			var p1 = 30000 * n1;
 			var p2 = 6000 * n2;
 			var p3 = 8000 * n3;
+			var p4 = 6000 * n4;
 			document.getElementById("food1Total").value = p1;
 			document.getElementById("food2Total").value = p2;
 			document.getElementById("food3Total").value = p3;
-	
-			var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3);
+			document.getElementById("food4Total").value = p4;
+		
+			var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3) + parseInt(n4);
 			document.getElementById("totalNumber").value = totalNumber;
-			var totalPrice = p1 + p2 + p3;
+			var totalPrice = p1 + p2 + p3 + p4;
 			document.getElementById("totalPrice").value = totalPrice;
 		}
 	</script>
